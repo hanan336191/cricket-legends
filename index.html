@@ -29,7 +29,7 @@ button,input{font:inherit}
 button{cursor:pointer}
 button:focus-visible,input:focus-visible{outline:2px solid var(--green);outline-offset:3px}
 .topbar{
-  height:76px;
+  min-height:76px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -41,61 +41,36 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--green);outline-
   top:0;
   z-index:10;
 }
-.logo{
-  font-size:25px;
-  font-weight:1000;
-  font-style:italic;
-  line-height:1;
-  color:white;
-  text-shadow:2px 3px 0 #0868d8;
-}
+.logo{font-size:25px;font-weight:1000;font-style:italic;line-height:1;color:white;text-shadow:2px 3px 0 #0868d8}
 .logo span{color:var(--gold)}
 .toplinks{display:flex;gap:25px;color:#d5e6ff;font-size:12px;letter-spacing:2px}
 .account{display:flex;align-items:center;gap:10px;font-size:13px}
-.avatar{
-  width:38px;height:38px;border-radius:50%;
-  background:#0759a5;display:grid;place-items:center;font-size:20px;
-}
+.avatar{width:38px;height:38px;border-radius:50%;background:#0759a5;display:grid;place-items:center;font-size:20px}
 .level{color:var(--muted);font-size:11px;margin-top:4px}
 .layout{display:grid;grid-template-columns:190px minmax(0,1fr);min-height:calc(100vh - 76px)}
-.sidebar{
-  padding:25px 12px;
-  background:#031124;
-  border-right:1px solid var(--border);
-}
+.sidebar{padding:25px 12px;background:#031124;border-right:1px solid var(--border)}
 .nav{
   width:100%;padding:15px 13px;margin-bottom:8px;
   border:1px solid transparent;border-radius:10px;
   background:transparent;color:#d5e6ff;text-align:left;font-size:14px;
 }
 .nav.active,.nav:hover{background:#0757c8;border-color:#1685ff;color:white}
-.sidebar-note{
-  margin-top:65px;color:var(--gold);text-align:center;
-  font-size:21px;font-weight:900;font-style:italic;line-height:1.3;
-}
+.sidebar-note{margin-top:65px;color:var(--gold);text-align:center;font-size:21px;font-weight:900;font-style:italic;line-height:1.3}
 main{padding:18px;min-width:0;max-width:1800px;width:100%;margin:auto}
 .hero{
   min-height:235px;border:1px solid #176ca0;border-radius:17px;
-  overflow:hidden;position:relative;
-  display:flex;align-items:center;
-  background:
-   linear-gradient(90deg,rgba(2,10,22,.94),rgba(2,20,44,.68),rgba(1,8,20,.32)),
-   radial-gradient(ellipse at 75% 25%,#2373b7,transparent 45%),
-   linear-gradient(125deg,#123f69,#031021 60%,#16623e);
+  overflow:hidden;position:relative;display:flex;align-items:center;
+  background:linear-gradient(90deg,rgba(2,10,22,.94),rgba(2,20,44,.68),rgba(1,8,20,.32)),
+  radial-gradient(ellipse at 75% 25%,#2373b7,transparent 45%),
+  linear-gradient(125deg,#123f69,#031021 60%,#16623e);
 }
-.hero:after{
-  content:"";position:absolute;inset:auto 0 0;height:48px;
-  background:linear-gradient(transparent,#03452f);
-}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:48px;background:linear-gradient(transparent,#03452f)}
 .hero-copy{position:relative;z-index:1;padding:30px;max-width:720px}
 .eyebrow{color:var(--green);letter-spacing:3px;font-size:11px;font-weight:bold}
 .hero h1{font-size:clamp(30px,5vw,58px);line-height:1;margin:14px 0}
 .hero h1 span{color:var(--gold)}
 .hero p{color:#d3e4f8;font-size:14px;line-height:1.6}
-.btn{
-  padding:12px 18px;border:0;border-radius:9px;
-  color:white;font-weight:bold;background:#0672e8;
-}
+.btn{padding:12px 18px;border:0;border-radius:9px;color:white;font-weight:bold;background:#0672e8}
 .btn.green{background:linear-gradient(120deg,#00a957,#00e676);color:#002516}
 .btn.gold{background:linear-gradient(120deg,#b57800,#ffd448);color:#261800}
 .btn.outline{background:transparent;border:1px solid #2674a4}
@@ -103,16 +78,8 @@ main{padding:18px;min-width:0;max-width:1800px;width:100%;margin:auto}
 .section-head h2{font-size:21px;margin:0}
 .section-head p{margin:5px 0 0;color:var(--muted);font-size:12px}
 .tournaments{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-.tournament{
-  min-width:0;border:1px solid var(--border);border-radius:13px;
-  overflow:hidden;background:linear-gradient(155deg,#0c2d4b,#041326);
-}
-.tournament-art{
-  height:105px;display:grid;place-items:center;
-  font-size:34px;font-weight:1000;
-  background:radial-gradient(circle at 50% 20%,#247cba,#07172c 70%);
-  text-shadow:0 3px 12px #000;
-}
+.tournament{min-width:0;border:1px solid var(--border);border-radius:13px;overflow:hidden;background:linear-gradient(155deg,#0c2d4b,#041326)}
+.tournament-art{height:105px;display:grid;place-items:center;font-size:34px;font-weight:1000;background:radial-gradient(circle at 50% 20%,#247cba,#07172c 70%);text-shadow:0 3px 12px #000}
 .tournament:nth-child(1){border-color:#00d66b}
 .tournament:nth-child(1) .tournament-art{background:linear-gradient(135deg,#00652d,#02251a)}
 .tournament:nth-child(2){border-color:#ba38ff}
@@ -128,64 +95,35 @@ main{padding:18px;min-width:0;max-width:1800px;width:100%;margin:auto}
 .tournament .btn{width:100%;padding:10px 4px;font-size:11px}
 .lower-grid{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:15px;margin-top:20px}
 .modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.mode{
-  min-height:112px;text-align:left;padding:16px;
-  border-radius:12px;border:1px solid #1265a1;
-  background:linear-gradient(140deg,#103f69,#051329);
-  color:white;
-}
+.mode{min-height:112px;text-align:left;padding:16px;border-radius:12px;border:1px solid #1265a1;background:linear-gradient(140deg,#103f69,#051329);color:white}
 .mode:nth-child(2){background:linear-gradient(140deg,#57300a,#111426);border-color:#b77a22}
 .mode:nth-child(3){background:linear-gradient(140deg,#40156a,#07142b);border-color:#8c36c7}
 .mode strong{display:block;font-size:15px;margin:8px 0}
 .mode small{color:#d1deed}
-.panel{
-  background:linear-gradient(145deg,#09233c,#041225);
-  border:1px solid var(--border);border-radius:13px;padding:15px;
-}
+.panel{background:linear-gradient(145deg,#09233c,#041225);border:1px solid var(--border);border-radius:13px;padding:15px}
 .panel h3{margin:0 0 12px;font-size:15px}
 .stat{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #163650;font-size:12px}
 .stat b{color:var(--gold)}
 .stat:last-child{border-bottom:0}
 #teamPage,#tournamentsPage,#profilePage,#settingsPage{display:none}
 .player-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.player{
-  border:1px solid #146447;border-radius:12px;overflow:hidden;
-  background:linear-gradient(150deg,#073b2d,#041326);
-}
+.player{border:1px solid #146447;border-radius:12px;overflow:hidden;background:linear-gradient(150deg,#073b2d,#041326)}
 .player.selected{outline:2px solid var(--green);box-shadow:0 0 20px #00e67630}
-.player-photo{
-  height:135px;display:grid;place-items:center;
-  background:radial-gradient(ellipse at 50% 25%,#267657,#082b25 60%,#041326);
-  font-size:54px;
-}
+.player-photo{height:135px;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 25%,#267657,#082b25 60%,#041326);font-size:54px}
 .player-photo img{width:100%;height:100%;object-fit:cover}
 .player-info{padding:12px}
 .player-info h3{margin:0 0 6px;font-size:14px}
 .player-info p{color:var(--muted);font-size:11px;margin:5px 0}
 .player-info .btn{width:100%;margin-top:9px;padding:9px}
-.team-banner{
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  flex-wrap:wrap;padding:17px;margin-top:15px;
-  border:1px solid #16563f;border-radius:12px;background:#06291f;
-}
+.team-banner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:17px;margin-top:15px;border:1px solid #16563f;border-radius:12px;background:#06291f}
 .team-banner h3{margin:0 0 6px}
 .team-banner p{margin:0;color:var(--muted);font-size:12px}
 .notice{font-size:12px;line-height:1.6;color:var(--muted);margin-top:12px}
 footer{padding:22px 8px;text-align:center;color:#8da9c7;font-size:11px;letter-spacing:1px}
-.overlay{
-  position:fixed;inset:0;z-index:30;background:#000c;
-  display:none;align-items:center;justify-content:center;padding:16px;
-}
-.authbox{
-  width:min(100%,400px);padding:24px;border-radius:16px;
-  border:1px solid #176a91;background:#06172b;
-}
+.overlay{position:fixed;inset:0;z-index:30;background:#000c;display:none;align-items:center;justify-content:center;padding:16px}
+.authbox{width:min(100%,400px);padding:24px;border-radius:16px;border:1px solid #176a91;background:#06172b}
 .authbox h2{margin-top:0}
-.authbox input{
-  display:block;width:100%;margin:10px 0;padding:13px;
-  border:1px solid #28516d;border-radius:8px;
-  background:#020d1b;color:white;
-}
+.authbox input{display:block;width:100%;margin:10px 0;padding:13px;border:1px solid #28516d;border-radius:8px;background:#020d1b;color:white}
 .authbox .btn{width:100%;margin-top:8px}
 .auth-switch{display:flex;gap:10px;margin-bottom:15px}
 .auth-switch button{flex:1}
@@ -200,15 +138,12 @@ footer{padding:22px 8px;text-align:center;color:#8da9c7;font-size:11px;letter-sp
  .toplinks{display:none}
 }
 @media(max-width:600px){
- .topbar{height:62px;padding:10px 13px}
+ .topbar{min-height:62px;padding:10px 13px}
  .logo{font-size:19px}
  .account{font-size:11px}
  .account .avatar{width:30px;height:30px}
  .layout{display:block}
- .sidebar{
-  position:sticky;top:62px;z-index:9;display:flex;overflow-x:auto;
-  padding:6px;background:#031124;border-right:0;border-bottom:1px solid var(--border);
- }
+ .sidebar{position:sticky;top:62px;z-index:9;display:flex;overflow-x:auto;padding:6px;background:#031124;border-right:0;border-bottom:1px solid var(--border)}
  .nav{white-space:nowrap;width:auto;flex:0 0 auto;padding:11px 12px;margin:0 3px;font-size:12px}
  .sidebar-note{display:none}
  main{padding:12px}
@@ -265,7 +200,6 @@ footer{padding:22px 8px;text-align:center;color:#8da9c7;font-size:11px;letter-sp
     <div><h2>🏆 Select Tournament</h2><p>Choose your favorite league and start your journey.</p></div>
     <button class="btn outline" onclick="showPage('tournaments')">View All →</button>
   </div>
-
   <div class="tournaments" id="tournamentCards"></div>
 
   <div class="lower-grid">
@@ -307,7 +241,7 @@ footer{padding:22px 8px;text-align:center;color:#8da9c7;font-size:11px;letter-sp
     <div><h3 id="selectedPlayerName">Babar Azam selected</h3><p id="selectedPlayerRole">Batsman • Pakistan</p></div>
     <button class="btn green" onclick="requireAuth('Play with Pakistan')">Play with Pakistan →</button>
   </div>
-  <p class="notice">Player cards currently use illustrative placeholders, not verified real player photographs or playable 3D models. Authentic portraits and 3D models must be added separately.</p>
+  <p class="notice">Player cards use illustrative placeholders, not verified real player photographs or playable 3D models.</p>
 </section>
 
 <section id="profilePage">
@@ -361,27 +295,23 @@ import {
   onAuthStateChanged, updateProfile, signOut
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import {
-  getDatabase, ref, set, get, update
+  getDatabase, ref, set, get
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
-/*
-  FIREBASE SETUP:
-  Firebase Console > Project settings > Your apps > Web app.
-  Copy the Firebase WEB configuration here.
-  Android configuration alone is not a substitute for this web config.
-*/
+/* YOUR FIREBASE WEB CONFIG */
 const firebaseConfig = {
-  apiKey: "PASTE_YOUR_WEB_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_WEB_APP_ID"
+  apiKey: "AIzaSyCu_LL8UgGRVSc3N1vqQ_-Iw9T4jSWt4KA",
+  authDomain: "cricket-legends-3d.firebaseapp.com",
+  databaseURL: "https://cricket-legends-3d-default-rtdb.firebaseio.com",
+  projectId: "cricket-legends-3d",
+  storageBucket: "cricket-legends-3d.firebasestorage.app",
+  messagingSenderId: "820150587485",
+  appId: "1:820150587485:web:5b36e23dd6dfc01ca9fdb4",
+  measurementId: "G-9VK0GPPCZ6"
 };
 
-let auth = null;
-let db = null;
+let auth;
+let db;
 let firebaseReady = false;
 let authMode = "signup";
 let currentUser = null;
@@ -408,14 +338,13 @@ const players = [
 ];
 
 function renderTournaments(targetId){
- const root = document.getElementById(targetId);
- root.innerHTML = tournaments.map(t=>`
+ const root=document.getElementById(targetId);
+ root.innerHTML=tournaments.map(t=>`
   <article class="tournament" style="border-color:${t.color}">
    <div class="tournament-art">${t.symbol}</div>
    <div class="tournament-body">
     <h3>${t.name}</h3><p>${t.desc}</p>
-    <button class="btn" style="background:${t.color};color:#00120d"
-      data-tournament="${t.name}">Play Now →</button>
+    <button class="btn" style="background:${t.color};color:#00120d" data-tournament="${t.name}">Play Now →</button>
    </div>
   </article>`).join("");
  root.querySelectorAll("[data-tournament]").forEach(btn=>{
@@ -427,7 +356,7 @@ function renderPlayers(){
  const root=document.getElementById("playerCards");
  root.innerHTML=players.map(p=>`
   <article class="player ${p.name===selectedPlayer?"selected":""}">
-   <div class="player-photo" aria-label="${p.name} portrait placeholder">🏏</div>
+   <div class="player-photo" aria-label="${p.name} portrait placeholder">${p.icon}</div>
    <div class="player-info">
     <h3>${p.name}</h3>
     <p>${p.role} • #${p.number}</p>
@@ -447,25 +376,18 @@ function renderPlayers(){
  });
 }
 
-function validConfig(){
- return firebaseConfig.apiKey.startsWith("AIza") &&
-  firebaseConfig.projectId!=="YOUR_PROJECT_ID" &&
-  firebaseConfig.appId!=="YOUR_WEB_APP_ID";
-}
+try{
+ const app=initializeApp(firebaseConfig);
+ auth=getAuth(app);
+ db=getDatabase(app);
+ firebaseReady=true;
 
-if(validConfig()){
- try{
-  const app=initializeApp(firebaseConfig);
-  auth=getAuth(app);
-  db=getDatabase(app);
-  firebaseReady=true;
-  onAuthStateChanged(auth,async user=>{
-   currentUser=user;
-   await updateAccountUI(user);
-  });
- }catch(err){
-  console.error("Firebase initialization failed:",err);
- }
+ onAuthStateChanged(auth,async user=>{
+  currentUser=user;
+  await updateAccountUI(user);
+ });
+}catch(err){
+ console.error("Firebase initialization failed:",err);
 }
 
 async function updateAccountUI(user){
@@ -478,22 +400,31 @@ async function updateAccountUI(user){
  document.getElementById("profileAuthButton").style.display=user?"none":"block";
  document.getElementById("logoutButton").style.display=user?"block":"none";
 
- if(user && db){
-  try{
-   const snap=await get(ref(db,"players/"+user.uid));
-   if(!snap.exists()){
-    await set(ref(db,"players/"+user.uid),{
-     displayName:name,email:user.email,createdAt:Date.now(),
-     stats:{matchesPlayed:0,totalRuns:0,highestScore:0,wicketsTaken:0}
-    });
-   }else{
-    const stats=snap.val().stats || {};
-    document.getElementById("matchesStat").textContent=stats.matchesPlayed||0;
-    document.getElementById("runsStat").textContent=stats.totalRuns||0;
-    document.getElementById("highestStat").textContent=stats.highestScore||0;
-    document.getElementById("wicketsStat").textContent=stats.wicketsTaken||0;
-   }
-  }catch(err){console.error("Database read/write failed:",err);}
+ if(!user || !db) return;
+
+ try{
+  const snap=await get(ref(db,"players/"+user.uid));
+  let playerData;
+
+  if(!snap.exists()){
+   playerData={
+    displayName:name,
+    email:user.email,
+    createdAt:Date.now(),
+    stats:{matchesPlayed:0,totalRuns:0,highestScore:0,wicketsTaken:0}
+   };
+   await set(ref(db,"players/"+user.uid),playerData);
+  }else{
+   playerData=snap.val();
+  }
+
+  const stats=playerData.stats || {};
+  document.getElementById("matchesStat").textContent=stats.matchesPlayed||0;
+  document.getElementById("runsStat").textContent=stats.totalRuns||0;
+  document.getElementById("highestStat").textContent=stats.highestScore||0;
+  document.getElementById("wicketsStat").textContent=stats.wicketsTaken||0;
+ }catch(err){
+  console.error("Database read/write failed:",err);
  }
 }
 
@@ -511,12 +442,16 @@ window.openAuth=function(){
  document.getElementById("authOverlay").style.display="flex";
  document.getElementById("authMessage").textContent="";
 };
+
 window.closeAuth=function(){
  document.getElementById("authOverlay").style.display="none";
 };
+
 window.setAuthMode=function(mode){
  authMode=mode;
  document.getElementById("authName").style.display=mode==="signup"?"block":"none";
+ document.getElementById("authName").required=mode==="signup";
+ document.getElementById("authPassword").autocomplete=mode==="signup"?"new-password":"current-password";
  document.getElementById("authSubmit").textContent=mode==="signup"?"Create Account":"Login";
  document.getElementById("authMessage").textContent="";
 };
@@ -529,29 +464,35 @@ function message(text,type="error"){
 
 document.getElementById("authForm").addEventListener("submit",async e=>{
  e.preventDefault();
+
  if(!firebaseReady){
-  message("Firebase Web config abhi add nahi hua. Project settings se Web app config paste karo.");
+  message("Firebase connect nahi hua. Internet aur Firebase configuration check karo.");
   return;
  }
+
  const name=document.getElementById("authName").value.trim();
  const email=document.getElementById("authEmail").value.trim();
  const password=document.getElementById("authPassword").value;
  const submit=document.getElementById("authSubmit");
  submit.disabled=true;
+
  try{
-  let result;
   if(authMode==="signup"){
-   result=await createUserWithEmailAndPassword(auth,email,password);
+   const result=await createUserWithEmailAndPassword(auth,email,password);
    if(name)await updateProfile(result.user,{displayName:name});
+
    await set(ref(db,"players/"+result.user.uid),{
     displayName:name||email.split("@")[0],
-    email,createdAt:Date.now(),
+    email:email,
+    createdAt:Date.now(),
     stats:{matchesPlayed:0,totalRuns:0,highestScore:0,wicketsTaken:0}
    });
   }else{
-   result=await signInWithEmailAndPassword(auth,email,password);
+   await signInWithEmailAndPassword(auth,email,password);
   }
+
   message("Success! Welcome to Cricket Legends.","success");
+
   setTimeout(()=>{
    closeAuth();
    if(pendingAction){
@@ -560,51 +501,72 @@ document.getElementById("authForm").addEventListener("submit",async e=>{
     continueAction(action);
    }
   },700);
+
  }catch(err){
   const errors={
-   "auth/email-already-in-use":"This email already has an account. Please login.",
-   "auth/invalid-email":"Please enter a valid email address.",
-   "auth/weak-password":"Choose a stronger password with at least 6 characters.",
-   "auth/invalid-credential":"Email or password is incorrect.",
-   "auth/network-request-failed":"Network problem. Check your internet connection."
+   "auth/email-already-in-use":"Is email ka account pehle se hai. Login karo.",
+   "auth/invalid-email":"Valid email address enter karo.",
+   "auth/weak-password":"Password kam az kam 6 characters ka hona chahiye.",
+   "auth/invalid-credential":"Email ya password ghalat hai.",
+   "auth/network-request-failed":"Internet connection check karo.",
+   "auth/operation-not-allowed":"Firebase Console mein Email/Password sign-in enable karo.",
+   "auth/too-many-requests":"Bohat attempts ho chuki hain. Thori dair baad try karo."
   };
-  message(errors[err.code]||err.message);
- }finally{submit.disabled=false;}
+  message(errors[err.code]||"Error: "+err.message);
+ }finally{
+  submit.disabled=false;
+ }
 });
 
 window.logout=async function(){
- if(!firebaseReady || !auth){openAuth();return;}
- try{await signOut(auth);}catch(err){alert("Logout failed: "+err.message);}
+ if(!firebaseReady || !auth){
+  openAuth();
+  return;
+ }
+ try{
+  await signOut(auth);
+ }catch(err){
+  alert("Logout failed: "+err.message);
+ }
 };
 
 function selectTournament(name){
  selectedTournament=name;
  if(!currentUser){
-  pendingAction={type:"tournament",name};
+  pendingAction={type:"tournament",name:name};
   openAuth();
   return;
  }
- continueAction({type:"tournament",name});
+ continueAction({type:"tournament",name:name});
 }
+
 function continueAction(action){
  if(action.type==="tournament"){
   showPage("team");
-  alert(action.name+" selected! Next, select a player for your team.");
+  alert(action.name+" selected! Ab apni team ka player select karo.");
  }else if(action.type==="mode"){
   showPage("team");
-  alert(action.name+" selected! Match gameplay engine abhi implement karna baqi hai.");
+  alert(action.name+" selected! Actual match gameplay abhi implement karna baqi hai.");
  }else if(action.type==="leaderboard"){
-  alert("Leaderboard will be available when match results are implemented.");
+  alert("Leaderboard match results system banne ke baad available hoga.");
  }
 }
+
 window.requireAuth=function(action){
  if(!currentUser){
-  pendingAction={type:action==="leaderboard"?"leaderboard":"mode",name:action};
+  pendingAction={
+   type:action==="leaderboard"?"leaderboard":"mode",
+   name:action
+  };
   openAuth();
  }else{
-  continueAction({type:action==="leaderboard"?"leaderboard":"mode",name:action});
+  continueAction({
+   type:action==="leaderboard"?"leaderboard":"mode",
+   name:action
+  });
  }
 };
+
 window.startMode=function(mode){
  if(!currentUser){
   pendingAction={type:"mode",name:mode};
@@ -613,6 +575,7 @@ window.startMode=function(mode){
   continueAction({type:"mode",name:mode});
  }
 };
+
 window.toggleSetting=function(button){
  button.textContent=button.textContent==="ON"?"OFF":"ON";
 };
@@ -620,11 +583,6 @@ window.toggleSetting=function(button){
 renderTournaments("tournamentCards");
 renderTournaments("allTournamentCards");
 renderPlayers();
-
-if(!firebaseReady){
- document.getElementById("authMessage").textContent="";
- console.info("Add Firebase Web app config to enable real login.");
-}
 </script>
 </body>
 </html>
